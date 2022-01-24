@@ -41,15 +41,8 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [[
-            InlineKeyboardButton('🔥 OFFICIAL CHANNEL 🔥', url=f'https://t.me/Request_flix_official')
-            ],[
-            InlineKeyboardButton('▪️GROUP▪️', url='https://t.me/Request_flix'),
-            InlineKeyboardButton('▪️CHANNEL▪️', url='https://t.me/+Zj6B-W1tdBg4ZmZl')
-            ],[
-            InlineKeyboardButton('▪️CHAT GROUP▪️', url='https://t.me/movie_chat_grp'),
-            InlineKeyboardButton('👑 OWNER 👑', url='https://t.me/lvx2_edz')
-        ]]
+        https://t.me/Request_flix
+        
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -84,15 +77,9 @@ async def start(client, message):
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
-            InlineKeyboardButton('🔥 OFFICIAL CHANNEL 🔥', url=f'https://t.me/Request_flix_official')
-            ],[
-            InlineKeyboardButton('▪️GROUP▪️', url='https://t.me/Request_flix'),
-            InlineKeyboardButton('▪️CHANNEL▪️', url='https://t.me/+Zj6B-W1tdBg4ZmZl')
-            ],[
-            InlineKeyboardButton('▪️CHAT GROUP▪️', url='https://t.me/movie_chat_grp'),
-            InlineKeyboardButton('👑 OWNER 👑', url='https://t.me/lvx2_edz')
-        ]]
+      
+            https://t.me/Request_flix
+      
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
