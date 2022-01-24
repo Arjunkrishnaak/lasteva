@@ -403,15 +403,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('🔥 OFFICIAL CHANNEL 🔥', url=f'https://t.me/Request_flix_official')
-        ], [
-            InlineKeyboardButton('▪️GROUP▪️', url='https://t.me/Request_flix'),
-            InlineKeyboardButton('▪️CHANNEL▪️', url='https://t.me/+Zj6B-W1tdBg4ZmZl')
-        ], [
-            InlineKeyboardButton('▪️CHAT GROUP▪️', url='https://t.me/movie_chat_grp'),
-            InlineKeyboardButton('👑 OWNER 👑', url='https://t.me/lvx2_edz')
-        ]]
+        https://t.me/Request_flix
+            
+        
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
